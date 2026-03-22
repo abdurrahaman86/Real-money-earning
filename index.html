@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EarnBD - Make Money Online</title>
+    <title>Online BD Earn - Free Money Earning</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Firebase -->
@@ -17,70 +17,73 @@
 </head>
 <body class="text-slate-800 pb-20">
 
-    <header class="glass shadow-sm sticky top-0 z-50 border-b">
+       <header class="glass shadow-sm sticky top-0 z-50 border-b">
         <div class="max-w-5xl mx-auto px-4 flex justify-between items-center h-16">
             <div class="text-2xl font-black text-blue-600 tracking-tight">
-                <i class="fas fa-coins text-yellow-500 drop-shadow"></i> Earn<span class="text-slate-800">BD</span>
+                <i class="fas fa-coins text-yellow-500 drop-shadow"></i> BD <span class="text-slate-600"> Earn</span>
             </div>
             <button id="btnLogout" onclick="logout()" class="hidden bg-red-100 text-red-600 hover:bg-red-500 hover:text-white transition px-4 py-2 rounded-lg font-bold text-sm shadow-sm">
-                <i class="fas fa-sign-out-alt"></i> লগআউট
+                <i class="fas fa-sign-out-alt"></i> Logout
             </button>
         </div>
     </header>
 
     <main class="max-w-5xl mx-auto px-4 mt-8">
         
-        <!-- ================= AUTH SECTION ================= -->
+             <!-- ================= AUTH SECTION ================= -->
         <div id="auth-section" class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 max-w-md mx-auto hidden">
             <div class="text-center mb-6">
-                <h2 class="text-2xl font-bold text-slate-800">স্বাগতম!</h2>
-                <p class="text-slate-500 text-sm">কাজ করে টাকা ইনকাম করতে যুক্ত হোন</p>
+       <img src="https://uploads.onecompiler.io/44ggv5rcj/44grf5vqc/10273.jpg" width="99%" height="5%" alt="Description of the image">
+                <h2 class="text-2xl font-bold text-slate-800">"স্বাগতম 🤹 BD Earning</h2>
+                <p class="text-slate-500 text-sm">"বিডি আর্নিং-এর পক্ষ থেকে আপনাকে স্বাগতম। 🎁 "প্রিয় গ্রাহক, নিবন্ধন সম্পন্ন করে, আপনার বোনাস গ্রহণ করুন"</p>
                 <!-- Referral Notice -->
-                <p id="ref-notice" class="hidden text-xs bg-green-100 text-green-700 font-bold p-2 rounded mt-2"><i class="fas fa-user-check"></i> আপনি একটি রেফারেল লিংকের মাধ্যমে এসেছেন!</p>
+                <p id="ref-notice" class="hidden text-xs bg-green-100 text-green-700 font-bold p-2 rounded mt-2"><i class="fas fa-user-check"></i>🎁 Thank you, complete the registration, and claim your bonus.</p>
             </div>
             
             <div class="flex border-b mb-6 bg-slate-50 rounded-t-lg">
-                <button onclick="toggleAuth('login')" id="tab-login" class="flex-1 py-3 font-bold text-blue-600 border-b-2 border-blue-600 transition">লগইন</button>
-                <button onclick="toggleAuth('register')" id="tab-register" class="flex-1 py-3 font-bold text-slate-500 hover:text-blue-500 transition">রেজিস্ট্রেশন</button>
+                <button onclick="toggleAuth('login')" id="tab-login" class="flex-1 py-3 font-bold text-blue-600 border-b-2 border-blue-600 transition">Login </button>
+                <button onclick="toggleAuth('register')" id="tab-register" class="flex-1 py-3 font-bold text-slate-500 hover:text-blue-500 transition">Registration</button>
             </div>
 
             <!-- Login -->
             <form id="loginForm" onsubmit="loginUser(event)" class="space-y-4">
-                <input type="email" id="l_email" placeholder="ইমেইল এড্রেস" class="w-full p-3 border rounded-xl bg-slate-50 focus:border-blue-500 outline-none" required>
-                <input type="password" id="l_pass" placeholder="পাসওয়ার্ড" class="w-full p-3 border rounded-xl bg-slate-50 focus:border-blue-500 outline-none" required>
+                <input type="email" id="l_email" placeholder="Enter Your E-mail" class="w-full p-3 border rounded-xl bg-slate-50 focus:border-blue-500 outline-none" required>
+                <input type="password" id="l_pass" placeholder="Enter Your Password" class="w-full p-3 border rounded-xl bg-slate-50 focus:border-blue-500 outline-none" required>
                 <div class="text-right">
-                    <button type="button" onclick="forgotPassword()" class="text-sm text-blue-600 font-semibold hover:underline">পাসওয়ার্ড ভুলে গেছেন?</button>
+                    <button type="button" onclick="forgotPassword()" class="text-sm text-blue-600 font-semibold hover:underline">Forgot password?</button>
                 </div>
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-lg transition">প্রবেশ করুন</button>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-lg transition">Submit Now</button>
             </form>
 
-            <!-- Register -->
+                               <!-- Register -->
             <form id="registerForm" onsubmit="registerUser(event)" class="space-y-4 hidden">
                 <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl text-sm text-blue-900 shadow-inner">
-                    <div class="font-black text-blue-700 mb-1"><i class="fas fa-info-circle"></i> একাউন্ট এক্টিভেশন ফি: ৯৯ টাকা</div>
-                    বিকাশ/নগদ (পার্সোনাল): <b class="text-lg bg-white px-2 py-0.5 rounded shadow-sm inline-block my-1">01968405571</b><br>
-                    <span class="text-xs text-blue-600 font-semibold">এই নাম্বারে ৯৯ টাকা সেন্ড মানি করে ফর্মটি পূরণ করুন।</span>
+                    <div class="font-black text-blue-700 mb-1"><i class="fas fa-info-circle"></i>BD-Earn Account Active Fee's: ৳99.00 BDT,</div>
+                    Wallet (Bkash & Nagod) Only Send Many: <b class="text-lg bg-white px-2 py-0.5 rounded shadow-sm inline-block my-1">+880 196-840-5571</b><br>
+                    <span class="text-xs text-blue-600 font-semibold">এই নাম্বারে (BDT ৳৯৯), "সেন্ড মানি করে "রেজিস্ট্রেশন কমপ্লিট করুন ধন্যবাদ।</span>
                 </div>
-                <input type="text" id="r_name" placeholder="আপনার সম্পূর্ণ নাম" class="w-full p-3 border rounded-xl bg-slate-50 focus:border-blue-500 outline-none" required>
-                <input type="tel" id="r_phone" placeholder="ফোন নাম্বার (017...)" class="w-full p-3 border rounded-xl bg-slate-50 focus:border-blue-500 outline-none" required>
-                <input type="email" id="r_email" placeholder="ইমেইল এড্রেস" class="w-full p-3 border rounded-xl bg-slate-50 focus:border-blue-500 outline-none" required>
-                <input type="password" id="r_pass" placeholder="পাসওয়ার্ড (৬ সংখ্যার বেশি)" class="w-full p-3 border rounded-xl bg-slate-50 focus:border-blue-500 outline-none" required>
-                <input type="text" id="r_trx" placeholder="Transaction ID (TrxID)" class="w-full p-3 border rounded-xl bg-slate-50 focus:border-blue-500 outline-none uppercase" required>
-                <button type="submit" id="reg-btn" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl shadow-lg transition">রেজিস্ট্রেশন কমপ্লিট করুন</button>
+                <input type="text" id="r_name" placeholder="Enter Your Name," class="w-full p-3 border rounded-xl bg-slate-50 focus:border-blue-500 outline-none" required>
+                <input type="tel" id="r_phone" placeholder="Enter Your Phone No.(017...)" class="w-full p-3 border rounded-xl bg-slate-50 focus:border-blue-500 outline-none" required>
+                <input type="email" id="r_email" placeholder="Enter Your E-mail." class="w-full p-3 border rounded-xl bg-slate-50 focus:border-blue-500 outline-none" required>
+                <input type="password" id="r_pass" placeholder="Enter Your, (6-20 Characters Password)," class="w-full p-3 border rounded-x1 bg-slate-50 focus:border-blue-500 outline-none" required>
+                               <input type="text" id="r_trx" placeholder="Transition Id Or Sending Last 4 Digit," class="w-full p-3 border rounded-xl bg-slate-50 focus:border-blue-500 outline-none" required>
+                <button type="submit" id="reg-btn" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl shadow-lg transition">Submit Now</button>
             </form>
         </div>
+
 
         <!-- ================= STATUS SCREENS ================= -->
         <div id="pending-section" class="hidden bg-white p-10 rounded-2xl shadow-lg border text-center max-w-lg mx-auto mt-10">
             <i class="fas fa-hourglass-half text-5xl text-orange-500 animate-pulse mb-4"></i>
-            <h2 class="text-2xl font-black mb-2 text-slate-800">একাউন্ট পেন্ডিং রয়েছে!</h2>
-            <p class="text-slate-500">আপনার পেমেন্ট এডমিন যাচাই করছেন। তথ্য সঠিক হলে খুব দ্রুত আপনার একাউন্ট একটিভ করা হবে।</p>
+            <h2 class="text-2xl font-black mb-2 text-slate-800">"Verification is in Progress.</h2>
+            <p class="text-slate-500">"সম্মানিত গ্রাহক, রেজিস্ট্রেশন করার জন্য অসংখ্য ধন্যবাদ। আমাদের টিম আপনার তথ্যগুলো ভেরিফিকেশন করতেছে।</p>
+  <p class="text-slate-500">"তথ্য সঠিক হলে (২/৩) ঘন্টার মধ্যে। আপনার একাউন্ট একটিভ করা হবে। অনুগ্রহ করে অপেক্ষা করুন ধন্যবাদ। অথবা E-mail: (bdearnmoney@gmail.com) এ মেসেজ করুন। ধন্যবাদ"</p>
         </div>
 
         <div id="banned-section" class="hidden bg-white p-10 rounded-2xl shadow-lg border border-red-200 text-center max-w-lg mx-auto mt-10">
             <i class="fas fa-ban text-5xl text-red-600 mb-4"></i>
-            <h2 class="text-2xl font-black mb-2 text-red-600">একাউন্ট ব্লক করা হয়েছে!</h2>
-            <p class="text-slate-600">নিয়ম ভঙ্গ করা বা প্রতারণার কারণে আপনার একাউন্ট ব্লক করা হয়েছে।</p>
+            <h2 class="text-2xl font-black mb-2 text-red-600">"প্রিয় গ্রাহক, আপনার একাউন্ট টি ব্লক করা হয়েছে!</h2>
+            <p class="text-slate-600">নিয়ম ভঙ্গ করা বা প্রতারণার কারণে আপনার একাউন্ট টি আমাদের টিম, ব্লক করা হয়েছে। Live chat E-mail: (bdearnmoney@gmail.com) এ মেসেজ করুন। ধন্যবাদ</p>
         </div>
 
         <!-- ================= MAIN DASHBOARD ================= -->
@@ -90,19 +93,19 @@
             <div class="bg-red-50 border-l-4 border-red-500 text-red-800 p-4 rounded-r-xl mb-6 flex gap-4 shadow-sm">
                 <i class="fas fa-exclamation-triangle text-2xl mt-0.5"></i>
                 <div class="text-sm font-semibold">
-                    <strong class="font-black text-red-700 block mb-1">সতর্কবার্তা!</strong>
-                    কাজ সম্পন্ন করে চ্যানেল সাবস্ক্রাইব বা পেজ ফলো করার পর যদি আনফলো করেন, তবে এডমিন চেকিংয়ে ধরা পড়লে আপনার একাউন্ট সাথে সাথে ব্যান করা হবে।
+                    <strong class="font-black text-red-700 block mb-1">📌 "সতর্ক বার্তা!</strong>
+                     "প্রতিটা গ্রাহকের একটি করে একাউন্ট থাকতে হবে! একাধিক একাউন্ট থাকা প্রতারণা মুলক! (BD Earn) টিম কোন ভুল তথ্য পেলে আপনার একাউন্ট সাথে সাথে ব্যান করা হবে। তাই অনুগ্রহ করে সবসময়। সঠিক তথ্য এবং সততার সাথে কাজ করুন। এবং বেশি বেশি রেফার করে আয় করুন ধন্যবাদ"
                 </div>
             </div>
 
             <!-- Refer & Earn Section -->
             <div class="bg-indigo-50 border border-indigo-200 p-6 rounded-2xl mb-6 flex flex-col md:flex-row justify-between items-center shadow-sm">
                 <div>
-                    <h3 class="font-bold text-indigo-800 text-lg mb-1"><i class="fas fa-user-plus"></i> রেফার করে ইনকাম করুন!</h3>
-                    <p class="text-sm text-indigo-600 mb-3">আপনার বন্ধুদের ইনভাইট করুন। প্রতিটি সফল রেজিস্ট্রেশনে পাবেন <strong class="bg-indigo-200 px-2 py-0.5 rounded text-indigo-900">১০ কয়েন</strong> ফ্রি!</p>
+                    <h3 class="font-bold text-indigo-800 text-lg mb-1"><i class="fas fa-user-plus"></i>🎁 "রেফার করে আয় করুন!</h3>
+                    <p class="text-sm text-indigo-600 mb-3">"আপনার বন্ধুদের ইনভাইট করুন। প্রতিটি সফল রেজিস্ট্রেশনের জন্য পাবেন" <strong class="bg-indigo-200 px-2 py-0.5 rounded text-indigo-900">১০ কয়েন"</strong> ফ্রি!</p>
                     <div class="flex items-center gap-2 bg-white border border-indigo-300 rounded-lg p-2 max-w-md">
                         <input type="text" id="ref-link" class="bg-transparent outline-none text-xs w-full text-slate-600" readonly>
-                        <button onclick="copyRefLink()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1.5 rounded text-xs font-bold transition whitespace-nowrap"><i class="fas fa-copy"></i> কপি করুন</button>
+                        <button onclick="copyRefLink()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1.5 rounded text-xs font-bold transition whitespace-nowrap"><i class="fas fa-copy"></i>Copy Now</button>
                     </div>
                 </div>
                 <i class="fas fa-gift text-5xl text-indigo-300 mt-4 md:mt-0 opacity-50"></i>
@@ -111,9 +114,9 @@
             <!-- Wallet Card -->
             <div class="bg-gradient-to-br from-slate-900 to-blue-900 rounded-3xl p-8 text-white flex flex-col md:flex-row justify-between items-center mb-10 shadow-xl">
                 <div class="text-center md:text-left mb-6 md:mb-0">
-                    <p class="text-blue-200 font-semibold mb-1 uppercase text-sm">আপনার সর্বমোট ব্যালেন্স</p>
+                    <p class="text-blue-200 font-semibold mb-1 uppercase text-sm">Your Account Baleens</p>
                     <div class="text-5xl font-black"><i class="fas fa-coins text-yellow-400"></i> <span id="u_wallet">0</span></div>
-                    <p class="text-xs text-blue-300 mt-2"><i class="fas fa-info-circle"></i> ১০০ কয়েন = ১০ টাকা</p>
+                    <p class="text-xs text-blue-300 mt-2"><i class="fas fa-info-circle"></i> ১০০ কয়েন = ১০ টাকা (BDT)</p>
                 </div>
                 <button onclick="document.getElementById('withdraw-modal').classList.remove('hidden')" class="bg-white text-slate-900 hover:bg-blue-50 px-8 py-3.5 rounded-xl font-bold shadow-lg flex items-center gap-2">
                     <i class="fas fa-wallet text-blue-600"></i> টাকা তুলুন
@@ -135,8 +138,8 @@
                 <i onclick="document.getElementById('submit-modal').classList.add('hidden')" class="fas fa-times text-slate-400 hover:text-red-500 cursor-pointer text-xl"></i>
             </div>
             <p id="submit-title" class="text-sm font-bold text-blue-600 mb-4 bg-blue-50 p-3 rounded-lg"></p>
-            <textarea id="s_proof" rows="3" placeholder="কাজের স্ক্রিনশট লিংক অথবা আপনার ইউজারনেম/ইমেইল দিন..." class="w-full p-4 border rounded-xl bg-slate-50 focus:border-blue-500 outline-none mb-6 resize-none"></textarea>
-            <button onclick="submitTaskProof()" class="w-full bg-blue-600 hover:bg-blue-700 text-white p-3.5 rounded-xl font-bold shadow-lg">কাজ সাবমিট করুন <i class="fas fa-paper-plane ml-1"></i></button>
+            <textarea id="s_proof" rows="3" placeholder="কাজের প্রমান এর লিংক অথবা আপনার ইউজারনেম/ইমেইল বা নাম্বার, ও অন্যান্য তথ্য দিয়ে জমা করুন..." class="w-full p-4 border rounded-xl bg-slate-50 focus:border-blue-500 outline-none mb-6 resize-none"></textarea>
+            <button onclick="submitTaskProof()" class="w-full bg-blue-600 hover:bg-blue-700 text-white p-3.5 rounded-xl font-bold shadow-lg">সাবমিট জমা করুন <i class="fas fa-paper-plane ml-1"></i></button>
         </div>
     </div>
 
@@ -157,9 +160,9 @@
             </div>
             <div class="bg-green-50 border border-green-200 text-center p-4 rounded-xl mb-6">
                 <p class="text-sm text-green-700 font-bold mb-1">আপনি পাবেন</p>
-                <div class="text-3xl font-black text-green-600"><span id="w_bdt">0</span> ৳</div>
+                <div class="text-3xl font-black text-green-600"><span id="w_bdt">0</span> (BDT) ৳</div>
             </div>
-            <button onclick="requestWithdraw()" class="w-full bg-slate-900 hover:bg-black text-white p-4 rounded-xl font-bold">রিকোয়েস্ট পাঠান</button>
+            <button onclick="requestWithdraw()" class="w-full bg-slate-900 hover:bg-black text-white p-4 rounded-xl font-bold">Withdraw Now</button>
         </div>
     </div>
 
@@ -276,8 +279,8 @@
                     wallet: 0,
                     joinedAt: new Date().toLocaleString()
                 }).then(() => {
-                    alert("রেজিস্ট্রেশন সফল! এডমিন এপ্রুভালের জন্য অপেক্ষা করুন।");
-                    btn.innerHTML = "রেজিস্ট্রেশন কমপ্লিট করুন";
+                    alert("রেজিস্ট্রেশন সফল! BD Earn, টিম আপনার তথ্য Processing.. করছে। অনুগ্রহ অপেক্ষা করুন।");
+                    btn.innerHTML = "প্রিয় গ্রাহক রেজিস্ট্রেশন কমপ্লিট করুন";
                     btn.disabled = false;
                 });
             }).catch(err => {
@@ -291,15 +294,15 @@
         function loginUser(e) {
             e.preventDefault();
             auth.signInWithEmailAndPassword(document.getElementById('l_email').value, document.getElementById('l_pass').value)
-                .catch(err => alert("ভুল ইমেইল বা পাসওয়ার্ড!"));
+                .catch(err => alert("তথ্য ভুল ইমেইল বা পাসওয়ার্ড! Live chat E-mail: (bdearnmoney@gmail.com) এ মেসেজ করুন। ধন্যবাদ"));
         }
 
         // Forgot Password
         function forgotPassword() {
             const email = document.getElementById('l_email').value;
-            if(!email) return alert("পাসওয়ার্ড রিসেট করতে আগে বক্সে আপনার ইমেইলটি লিখুন, তারপর 'পাসওয়ার্ড ভুলে গেছেন?' এ ক্লিক করুন।");
+            if(!email) return alert("পাসওয়ার্ড রিসেট করতে Live chat E-mail: (bdearnmoney@gmail.com) এ মেসেজ করুন। আপনি Email (box teyp) একাউন্ট নাম, নাম্বার, ইমেইল, লিখুন. তারপর 'লিখুন পাসওয়ার্ড ভুলে গেছেন?' এরপর ইমেইল পাঠিয়ে দিন।");
             auth.sendPasswordResetEmail(email).then(() => {
-                alert("আপনার ইমেইলে পাসওয়ার্ড রিসেট লিংক পাঠানো হয়েছে।");
+                alert("আপনার ইমেইলে পাসওয়ার্ড রিসেট করা হয়েছে। অন্যান্য কোন সমস্যা থাকলে। Live chat E-mail: (bdearnmoney@gmail.com) এ মেসেজ করুন। ধন্যবাদ");
             }).catch(err => alert("ত্রুটি: " + err.message));
         }
 
@@ -323,7 +326,7 @@
                     const taskId = child.key;
                     
                     let imgHtml = task.image ? `<img src="${task.image}" class="w-full h-40 object-cover rounded-t-2xl border-b">` : `<div class="w-full h-32 bg-slate-200 rounded-t-2xl flex items-center justify-center text-slate-400"><i class="fas fa-image text-3xl"></i></div>`;
-                    let linkHtml = task.link ? `<a href="${task.link}" target="_blank" class="text-blue-600 font-bold text-sm mb-4 inline-block hover:underline"><i class="fas fa-external-link-alt"></i> লিংকে যান</a>` : '';
+                    let linkHtml = task.link ? `<a href="${task.link}" target="_blank" class="text-blue-600 font-bold text-sm mb-4 inline-block hover:underline"><i class="fas fa-external-link-alt"></i>⌛ "লিংকে যান...</a>` : '';
 
                     container.innerHTML += `
                         <div class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-shadow flex flex-col h-full">
@@ -366,7 +369,7 @@
                 status: 'pending',
                 time: new Date().toLocaleString()
             }).then(() => {
-                alert("আপনার প্রমাণ সফলভাবে জমা হয়েছে! এডমিন এপ্রুভ করলে কয়েন যোগ হবে।");
+                alert("আপনার প্রমাণ সফলভাবে (BD Earn) টিম এর কাছে পাঠানো হয়েছে! (BD Earn) টিম তথ্য সঠিক হলে। একাউন্ট এ কয়েন Auto যোগ হবে।");
                 document.getElementById('submit-modal').classList.add('hidden');
             });
         }
@@ -380,8 +383,8 @@
         function requestWithdraw() {
             const coins = parseInt(document.getElementById('w_coins').value);
             const bdt = (coins / 100) * 10;
-            if(coins < 100) return alert("মিনিমাম ১০০ কয়েন উইথড্র করতে হবে।");
-            if(coins > userData.wallet) return alert("আপনার ব্যালেন্সে পর্যাপ্ত কয়েন নেই!");
+            if(coins < 100) return alert("মিনিমাম (100.00/25,000.00) কয়েন উইথড্র  করতে হবে।");
+            if(coins > userData.wallet) return alert("🚫 Notification: Main wallet Amount is not Enough, বেশি বেশি কাজ ও রেফার করুন ধন্যবাদ");
 
             db.ref('users/' + currentUser.uid + '/wallet').set(userData.wallet - coins);
 
@@ -395,7 +398,7 @@
                 status: 'pending',
                 time: new Date().toLocaleString()
             }).then(() => {
-                alert("উইথড্র রিকোয়েস্ট পাঠানো হয়েছে।");
+                alert("উইথড্র রিকোয়েস্ট (BD Earn) এর কাছে পাঠানো হয়েছে। কিছু সময়ের মধ্যে আপনার Wallet এ পেয়ে যাবেন");
                 document.getElementById('withdraw-modal').classList.add('hidden');
             });
         }
